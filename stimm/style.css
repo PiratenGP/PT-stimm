@@ -1,0 +1,39 @@
+.wrap.pt-stimm form {
+	display: inline;
+}
+
+.wrap.pt-stimm table {
+	border-collapse: collapse;
+	background-color: #f5f5f5;
+}
+.wrap.pt-stimm table th {
+	background-color: #ddd;
+}
+.wrap.pt-stimm table td, .wrap.pt-stimm table th {
+	border: 1px solid black;
+	padding: 3px;
+}
+
+.wrap.pt-stimm button.del, .wrap.pt-stimm input.del {
+	color: red;
+	font-weight: bold;
+}
+
+.wrap.pt-stimm hr {
+	border-color: #999;
+}
+
+.wrap.pt-stimm textarea {
+	width: 600px;
+	height: 80px;
+}
+
+table.pt-stimm , table.pt-stimm  td,  table.pt-stimm   th {
+	border-left: none;
+	border-right: none;
+}
+
+table.pt-stimm .mitglied {
+	text-align: center;
+}
+
