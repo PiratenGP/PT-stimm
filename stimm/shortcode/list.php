@@ -42,7 +42,7 @@ foreach ($daten as $key0 => $val0) {
 				$stimme = $val2->stimmen[$val3->id];
 				if (!$stimme) $stimme = 0;
 				$stimme = PT_stimm::$stimmen[$stimme];
-				echo "<td class=\"mitglied\" title=\"".$stimme['name']."\" style=\"background-color:".$stimme['color'].";color:".$stimme['textcolor']."\">";
+				echo "<td title=\"".$stimme['name']."\" class=\"mitglied pt-stimm-stimme ".$stimme['class']."\">";
 				echo $stimme['kuerzel'];
 				echo "</td><td></td>";
 			}

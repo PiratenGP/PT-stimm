@@ -105,31 +105,32 @@ class PT_stimm {
 		array(
 			"name"		=>	"Keine Angabe",
 			"kuerzel"	=>	"?",
+			"class"		=>	"stimm-ka",
 		),
 		array(
 			"name"		=>	"Zustimmung",
 			"kuerzel"	=>	"",
-			"color"		=>	"#33B821"
+			"class"		=>	"stimm-yes",
 		),
 		array(
 			"name"		=>	"Ablehnung",
 			"kuerzel"	=>	"",
-			"color"		=>	"#CF6363"
+			"class"		=>	"stimm-no",
 		),
 		array(
 			"name"		=>	"Enthaltung",
 			"kuerzel"	=>	"",
-			"color"		=>	"#EDE15A"
+			"class"		=>	"stimm-x",
 		),
 		array(
 			"name"		=>	"Geheim",
 			"kuerzel"	=>	"G",
-			"color"		=>	"#000000",
-			"textcolor"	=>	"#ffffff",
+			"class"		=>	"stimm-secret",
 		),
 		array(
 			"name"		=>	"Nicht abgestimmt",
 			"kuerzel"	=>	"",
+			"class"		=>	"stimm-na",
 		),
 	
 	

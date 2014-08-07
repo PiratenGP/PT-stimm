@@ -37,3 +37,30 @@ table.pt-stimm .mitglied {
 	text-align: center;
 }
 
+
+/* Farben */
+
+.pt-stimm-stimme.stimm-ka {
+	/* background-color: ; */
+	/* color: ; */
+}
+.pt-stimm-stimme.stimm-yes {
+	background-color: #33B821;
+	/* color: ; */
+}
+.pt-stimm-stimme.stimm-no {
+	background-color: #CF6363;
+	/* color: ; */
+}
+.pt-stimm-stimme.stimm-x {
+	background-color: #EDE15A;
+	/* color: ; */
+}
+.pt-stimm-stimme.stimm-secret {
+	background-color: #000000;
+	color: #ffffff;
+}
+.pt-stimm-stimme.stimm-na {
+	/* background-color: ; */
+	/* color: ; */
+}
