@@ -1,5 +1,7 @@
 <?php
 wp_enqueue_style( "pt-stimm", plugin_dir_url(__FILE__)."style.css" );
+$style = get_option("pt_stimm_style");
+wp_add_inline_style( "pt-stimm", $style );
 class PT_stimm_punkt {
 	public $id;
 	public $text;
@@ -177,6 +179,7 @@ class PT_stimm {
 			$mitglieder = explode(",", $mitglieder);
 		}
 		$options = get_option("pt_stimm");
+		$style = get_option("pt_stimm_style");
 		
 		if (!$id && $ext) {
 			if ($options['gremien-ext'][$ext]) {
@@ -205,7 +208,6 @@ class PT_stimm {
 		
 		
 		if ($gremium != false) {
-
 			ob_start();
 			include('shortcode/list.php');
 			$content = ob_get_contents();
@@ -229,6 +231,8 @@ class PT_stimm {
 		if ($_GET['reset'] == "1") update_option("PT_stimm", null);
 		
 		$options = get_option("pt_stimm");
+		$style = get_option("pt_stimm_style");
+		
 		$page = $_REQUEST['pt-stimm-page'];
 		if (!$page) $page = "home";
 		
@@ -242,7 +246,39 @@ class PT_stimm {
 				"gremien_ext" => array(),
 			);
 		}
-		//update_option("pt_stimm");
+		
+		if ($style == "") {
+			$style = <<<STYLE
+/* Farben */
+
+.pt-stimm-stimme.stimm-ka { /* Keine Angabe */
+	/* background-color: ; */
+	/* color: ; */
+}
+.pt-stimm-stimme.stimm-yes { /* Zugestimmt */
+	background-color: #33B821;
+	/* color: ; */
+}
+.pt-stimm-stimme.stimm-no { /* Abgelehnt */
+	background-color: #CF6363;
+	/* color: ; */
+}
+.pt-stimm-stimme.stimm-x { /* Enthaltung */
+	background-color: #EDE15A;
+	/* color: ; */
+}
+.pt-stimm-stimme.stimm-secret { /* Geheime Abstimmung */
+	background-color: #000000;
+	color: #ffffff;
+}
+.pt-stimm-stimme.stimm-na { /* Nicht abgestimmt */
+	/* background-color: ; */
+	/* color: ; */
+}
+STYLE;
+		update_option("PT_stimm_style", $style);
+		}
+		
 		$error = array();
 		$success = array();
 		if ($_POST['pt-stimm-action'] == "gremium-add") {
@@ -369,6 +405,17 @@ class PT_stimm {
 				$success[] = "Gremium geändert.";
 			}
 			$page = "gremium-edit";
+		}
+		
+		if ($_POST['pt-stimm-action'] == "style-edit") {
+			$style = htmlspecialchars(trim(stripslashes($_POST['pt-stimm-style'])));
+			
+			
+			update_option("pt_stimm_style", $style);
+			
+			$success[] = "Stylesheet geändert.";
+			
+			$page = "home";
 		}
 		
 		if ($_POST['pt-stimm-action'] == "gremium-ext-add") {

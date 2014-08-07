@@ -71,4 +71,12 @@ URL: <input name="pt-stimm-gremium-ext-url">
 
 </form>
 
+<hr>
+<h3>Custom Stylesheet</h3>
+<form method="post">
+<textarea style="height:400px;width: 400px;" name="pt-stimm-style"><?php echo htmlspecialchars($style); ?></textarea><br>
+<input type="hidden" name="pt-stimm-action" value="style-edit">
+<button type="submit">Stylesheet ändern</button>
+</form>
+
 </div>
