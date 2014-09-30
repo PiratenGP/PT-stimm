@@ -171,6 +171,14 @@ class PT_stimm {
 		return $cols;
 	}
 	
+	static public function shortcode_legende($atts) {
+			ob_start();
+			include('shortcode/legende.php');
+			$content = ob_get_contents();
+			ob_end_clean();
+			return $content;
+	}
+	
 	static public function shortcode($atts) {
 		$id = $atts['id'];
 		$ext = $atts['ext'];
@@ -742,4 +750,5 @@ STYLE;
 }
 
 add_shortcode( "pt-stimm", array("PT_stimm", "shortcode"));
+add_shortcode( "pt-stimm-legende", array("PT_stimm", "shortcode_legende"));
 ?>
