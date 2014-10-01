@@ -212,8 +212,12 @@ class PT_stimm {
 			}
 		}
 		
-		
-		
+		$hidefrom = $atts['hidefrom'];
+		echo $hidefrom;
+		if (!$hidefrom || !is_numeric($hidefrom) || ($hidefrom < 1)) {
+			$hidefrom = 0;
+		}
+		echo $hidefrom;
 		
 		if ($gremium != false) {
 			ob_start();

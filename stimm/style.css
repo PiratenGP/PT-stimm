@@ -28,15 +28,28 @@
 	height: 80px;
 }
 
+table.pt-stimm {
+	width: 100%;
+}
 table.pt-stimm , table.pt-stimm  td,  table.pt-stimm   th {
 	border-left: none;
 	border-right: none;
+	
 }
 
 table.pt-stimm .mitglied {
 	text-align: center;
+	width: 20px;
 }
-
+table.pt-stimm .pt-stimm-separator {
+	width: 1px;
+}
+table.pt-stimm .pt-stimm-datum {
+	width: 80px;
+}
+table.pt-stimm .pt-stimm-pfeil {
+	text-align: right;
+}
 
 /* Farben */
 
