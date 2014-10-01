@@ -2,7 +2,7 @@ Piraten-Tools / Stimverhalten
 =================================================
 tbd
 
-Version 1.2.0, 07.08.2014
+Version 1.2.1, 01.10.2014
 
 Autor: @stoppegp
 Lizenz: CC-BY-SA 3.0, http://creativecommons.org/licenses/by-sa/3.0/de/deed.de
@@ -21,6 +21,8 @@ Zeigt eine Legende an.
 
 
 Changelog:
+= 01.10.2014 - v1.2.1 =
+-- Debug-Ausgabe entfernt
 = 01.10.2014 - v1.2.0 =
 -- Sitzungen einklappbar
 -- Shortcode für Legende
