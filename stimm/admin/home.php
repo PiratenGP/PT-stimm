@@ -4,7 +4,7 @@
 <h3>Gremien</h3>
 <table>
 <tr>
-<th>ID</th><th>Name</th><th>Shortcode</th><th>Daten</th><th></th>
+<th>ID</th><th>Name</th><th>Shortcode</th><th>Daten</th><th></th><th></th>
 </tr>
 <?php
 foreach($options['gremien'] as $val) {
