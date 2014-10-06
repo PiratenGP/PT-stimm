@@ -53,7 +53,7 @@ foreach($options['gremien-ext'] as $key => $val) {
 	echo "<td>".$key."</td>";
 	echo "<td>".$val['url']."</td>";
 	echo "<td><pre>[pt-stimm ext=".$key."]</pre></td>";
-	echo "<td><!--<form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-action\" value=\"gremium-del\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$key."\"><input type=\"submit\" value=\"Löschen\"></form> | --><form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-page\" value=\"gremium-edit\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$key."\"><button type=\"submit\" value=\"Bearbeiten\">Bearbeiten</button></form></td>";
+	echo "<td><form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-action\" value=\"gremium-ext-del\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$key."\"><button class=\"del\" type=\"submit\" value=\"Löschen\">Löschen</button></form></td>";
 	echo "</tr>";
 	//echo "<li>".$val->getID().": ".$val->name." | <!--<form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-action\" value=\"gremium-del\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$val->getID()."\"><input type=\"submit\" value=\"Löschen\"></form> | --><form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-page\" value=\"gremium-edit\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$val->getID()."\"><input type=\"submit\" value=\"Bearbeiten\"></form></li>";
 }

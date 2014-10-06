@@ -445,6 +445,21 @@ STYLE;
 			$page = "home";
 		}
 		
+		if ($_POST['pt-stimm-action'] == "gremium-ext-del") {
+			$delID = $_POST['pt-stimm-gremium-id'];
+			
+			if (!$options['gremien-ext'][$delID]) $error[] = "Fehler.";
+			
+			if (count($error) == 0) {
+				unset($options['gremien-ext'][$delID]);
+				update_option("pt_stimm", $options);
+				$success[] = "Externes Gremium gelöscht.";
+			}
+			
+			$page = "home";
+			
+		}
+		
 		if ($_POST['pt-stimm-action'] == "mitglied-add") {
 			$gremiumid = $_POST['pt-stimm-gremium-id'];
 			$data_name = htmlspecialchars(trim(stripslashes($_POST['pt-stimm-mitglied-name'])));
