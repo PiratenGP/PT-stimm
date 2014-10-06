@@ -594,6 +594,7 @@ STYLE;
 			
 			if (count($error) == 0) {
 				$options['gremien'][$gremiumid]->sitzungen[$sitzungid]->punkte[$punktid]->text = $data_text;
+				$options['gremien'][$gremiumid]->sitzungen[$sitzungid]->punkte[$punktid]->rislink = $data_rislink;
 				update_option("pt_stimm", $options);
 				$success[] = "Punkt bearbeitet.";
 			}
