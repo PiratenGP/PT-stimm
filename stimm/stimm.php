@@ -390,12 +390,16 @@ STYLE;
 		
 		if ($_POST['pt-stimm-action'] == "gremium-del") {
 			$delID = $_POST['pt-stimm-gremium-id'];
-			if ($options['gremien'][$delID]) {
-				unset($options['gremien'][$delID]);
-				update_option("pt_stimm", $options);
-				$success = "Gremium wurde gelöscht.";
-			} else {
-				$error[] = "Gremium konnte nicht gelöscht werden.";
+			$val = $_POST['valdel'.$delID];
+			
+			if ($val == "doit") {
+				if ($options['gremien'][$delID]) {
+					unset($options['gremien'][$delID]);
+					update_option("pt_stimm", $options);
+					$success = "Gremium wurde gelöscht.";
+				} else {
+					$error[] = "Gremium konnte nicht gelöscht werden.";
+				}
 			}
 			
 			$page = "home";

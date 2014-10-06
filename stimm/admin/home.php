@@ -18,7 +18,8 @@ foreach($options['gremien'] as $val) {
 	echo "<td>".$val->name."</td>";
 	echo "<td><pre>[pt-stimm id=".$val->getID()."]</pre></td>";
 	echo "<td><a href=\"".$url."/getjson.php?id=".$val->getID()."\">Daten</a></td>";
-	echo "<td><!--<form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-action\" value=\"gremium-del\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$val->getID()."\"><input type=\"submit\" value=\"Löschen\"></form> | --><form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-page\" value=\"gremium-edit\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$val->getID()."\"><button type=\"submit\" value=\"Bearbeiten\">Bearbeiten</button></form></td>";
+	echo "<td><form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-page\" value=\"gremium-edit\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$val->getID()."\"><button type=\"submit\" value=\"Bearbeiten\">Bearbeiten</button></form></td>";
+	echo "<td><form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-action\" value=\"gremium-del\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$val->getID()."\"><input type=\"checkbox\" value=\"doit\" name=\"valdel".$val->getID()."\" id=\"valdel".$val->getID()."\" /> <label for=\"valdel".$val->getID()."\">Löschen</label> <button class=\"del\" type=\"submit\" value=\"Löschen\">Löschen</button></form></td>";
 	echo "</tr>";
 	//echo "<li>".$val->getID().": ".$val->name." | <!--<form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-action\" value=\"gremium-del\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$val->getID()."\"><input type=\"submit\" value=\"Löschen\"></form> | --><form method=\"post\"><input type=\"hidden\" name=\"pt-stimm-page\" value=\"gremium-edit\"><input type=\"hidden\" name=\"pt-stimm-gremium-id\" value=\"".$val->getID()."\"><input type=\"submit\" value=\"Bearbeiten\"></form></li>";
 }
