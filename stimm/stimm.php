@@ -776,7 +776,7 @@ add_action('init', 'register_shordcode_js');
 add_action('wp_footer', 'print_shordcode_js');
 
 function register_shordcode_js() {
-	wp_register_script('pt-stimm-shortcode', plugins_url('stimm/shortcode/script.js', __FILE__), array('jquery'), '1.0', true);
+	wp_register_script('pt-stimm-shortcode', plugins_url('shortcode/script.js', __FILE__), array('jquery'), '1.0', true);
 }
 
 function print_shordcode_js() {

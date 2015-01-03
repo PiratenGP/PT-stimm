@@ -6,7 +6,7 @@ $('tr.sitzung').each(function() {
 	const show = $(this).data("show");
 	const sitzung = $(this).attr("data-sitzung");
 	if (!show) {
-		$(this).find(".pt-stimm-pfeil").html("?");
+		$(this).find(".pt-stimm-pfeil").html("▼");
 		$("tr").each(
 			function(){
 				if ($(this).data("sitzung2") == sitzung) {
@@ -15,7 +15,7 @@ $('tr.sitzung').each(function() {
 			}
 		);
 	} else {
-	$(this).find(".pt-stimm-pfeil").html("?");
+	$(this).find(".pt-stimm-pfeil").html("▲");
 	}
 	
 	$(this).hover(  function () {
@@ -30,9 +30,9 @@ $('tr.sitzung').each(function() {
 		const show = $(this).data("show");
 		
 		if (show) {
-			$(this).find(".pt-stimm-pfeil").html("?");
+			$(this).find(".pt-stimm-pfeil").html("▼");
 		} else {
-			$(this).find(".pt-stimm-pfeil").html("?");
+			$(this).find(".pt-stimm-pfeil").html("▲");
 		}
 		
 		$("tr").each(
