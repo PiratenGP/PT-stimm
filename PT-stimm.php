@@ -3,7 +3,7 @@
 Plugin Name: Piraten-Tools / Stimmverhalten
 Plugin URI: https://github.com/PiratenGP/PT-stimm
 Description: Piraten-Tools / Stimmverhalten
-Version: 1.3.0
+Version: 1.3.1
 Author: @stoppegp
 Author URI: http://stoppe-gp.de
 License: CC-BY-SA 3.0
