@@ -180,6 +180,7 @@ class PT_stimm {
 	}
 	
 	static public function shortcode($atts) {
+		global $add_pt_stimm_shortcode_script;
 		$id = $atts['id'];
 		$ext = $atts['ext'];
 		$mitglieder = $atts['mitglieder'];
@@ -218,6 +219,7 @@ class PT_stimm {
 		}
 		
 		if ($gremium != false) {
+			$add_pt_stimm_shortcode_script = true;
 			ob_start();
 			include('shortcode/list.php');
 			$content = ob_get_contents();
@@ -770,7 +772,21 @@ STYLE;
 
 	
 }
+add_action('init', 'register_shordcode_js');
+add_action('wp_footer', 'print_shordcode_js');
 
+function register_shordcode_js() {
+	wp_register_script('pt-stimm-shortcode', plugins_url('stimm/shortcode/script.js', __FILE__), array('jquery'), '1.0', true);
+}
+
+function print_shordcode_js() {
+	global $add_pt_stimm_shortcode_script;
+
+	if ( ! $add_pt_stimm_shortcode_script )
+		return;
+
+	wp_print_scripts('pt-stimm-shortcode');
+}
 add_shortcode( "pt-stimm", array("PT_stimm", "shortcode"));
 add_shortcode( "pt-stimm-legende", array("PT_stimm", "shortcode_legende"));
 ?>
