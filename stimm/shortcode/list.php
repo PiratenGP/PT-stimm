@@ -26,7 +26,7 @@ foreach ($daten as $key0 => $val0) {
 		} else {
 			$datashow = "true";
 		}
-		echo "<tr class=\"sitzung\" data-show=\"".$datashow."\" data-sitzung=\"".$key0."-".$key."\"><td><strong>".date("d.m.Y", $val->datum)."</strong></td><td></td>";
+		echo "<tr class=\"sitzung\" data-show=\"".$datashow."\" data-sitzung=\"".$id."-".$key0."-".$key."\"><td><strong>".date("d.m.Y", $val->datum)."</strong></td><td></td>";
 		foreach ($gremium->mitglieder as $valm) {
 			if (is_array($mitglieder) && !in_array($valm->id, $mitglieder)) continue;
 			echo "<td></td><td></td>";
@@ -39,7 +39,7 @@ foreach ($daten as $key0 => $val0) {
 		$c = 0;
 		foreach ($val->punkte as $val2) {
 			?>
-			<tr data-sitzung2="<?=$key0;?>-<?=$key;?>">
+			<tr data-sitzung2="<?=$id;?>-<?=$key0;?>-<?=$key;?>">
 			<td></td><td></td>
 			<?php
 			foreach ($gremium->mitglieder as $val3) {
