@@ -134,6 +134,11 @@ class PT_stimm {
 			"kuerzel"	=>	"",
 			"class"		=>	"stimm-na",
 		),
+		array(
+			"name"		=>	"Aufruf",
+			"kuerzel"	=>	"a",
+			"class"		=>	"stimm-aufruf",
+		),
 	
 	
 	);

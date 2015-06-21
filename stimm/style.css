@@ -61,6 +61,10 @@ table.pt-stimm .pt-stimm-pfeil {
 	background-color: #33B821;
 	/* color: ; */
 }
+.pt-stimm-stimme.stimm-aufruf {
+	background-color: #95F089;
+	color: #000000; 
+}
 .pt-stimm-stimme.stimm-no {
 	background-color: #CF6363;
 	/* color: ; */
