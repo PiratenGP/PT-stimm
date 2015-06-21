@@ -50,6 +50,9 @@ table.pt-stimm .pt-stimm-datum {
 table.pt-stimm .pt-stimm-pfeil {
 	text-align: right;
 }
+.pt-stimm-stimme {
+	text-align: center;
+}
 
 /* Farben */
 
