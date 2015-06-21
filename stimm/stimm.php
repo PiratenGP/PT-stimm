@@ -137,6 +137,7 @@ class PT_stimm {
 		array(
 			"name"		=>	"Aufruf",
 			"kuerzel"	=>	"A",
+			"desc"		=>	"Mit \"Aufruf\" markierte Punkte wurden ohne Abstimmung angenommen.",
 			"class"		=>	"stimm-aufruf",
 		),
 	
