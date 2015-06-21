@@ -36,7 +36,9 @@ table.pt-stimm , table.pt-stimm  td,  table.pt-stimm   th {
 	border-right: none;
 	
 }
-
+table.pt-stimm  td,  table.pt-stimm   th {
+	padding: 0.5em 0.5em 0.5em 0.5em;
+}
 table.pt-stimm .mitglied {
 	text-align: center;
 	width: 20px;
